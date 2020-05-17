@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
 
 
 def login_view(request):
@@ -13,8 +13,3 @@ def login_view(request):
         else:
             return JsonResponse({'status': 'wrong username or password'})
     return JsonResponse({'error': 'Method Not Allowed'}, status=405)
-
-
-def logout_view(request):
-    logout(request)
-    return JsonResponse({'status': 'you logged out'})
