@@ -3,8 +3,8 @@ from django.db.models import Avg
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 
-from .models import Movie, Rate, Review
-from .tasks import send_email
+from movie.models.models import Movie, Rate, Review
+from movie.tasks.tasks import send_email
 
 
 def movies_list_view(request):

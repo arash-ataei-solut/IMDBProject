@@ -6,7 +6,7 @@ from email.message import EmailMessage
 from celery import shared_task
 from django.contrib.auth.models import User
 
-from movie.models import Movie
+from movie.models.models import Movie
 
 
 @shared_task
